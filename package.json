@@ -1,22 +1,21 @@
 {
   "name": "woreda",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "the design system that's from africa with love",
   "author": "Sami Fouad - from africa with love",
   "website": "https://fromafri.ca",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/woreda.umd.cjs",
-  "module": "./dist/woreda.js",
-  "svelte": "./dist/woreda.js",
+  "main": "./src/main.ts",
+  "module": "./src/main.ts",
+  "svelte": "./src/main.ts",
   "exports": {
     ".": {
-      "import": "./dist/woreda.js",
-      "require": "./dist/woreda.umd.cjs"
+      "import": "./src/main.ts"
     }
   },
   "files": [
-    "dist"
+    "src"
   ],
   "scripts": {
     "dev": "vite",
