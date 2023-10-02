@@ -1,3 +1,3 @@
 # woreda design
 
-the design system that's [https://fromafri.ca](from africa with love)
+the design system that's [from africa with love](https://fromafri.ca)
