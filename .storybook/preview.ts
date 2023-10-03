@@ -1,4 +1,6 @@
 import type { Preview } from "@storybook/react";
+import { withThemeByClassName } from "@storybook/addon-styling";
+import "../src/woreda.css";
 
 const preview: Preview = {
   parameters: {
@@ -11,5 +13,15 @@ const preview: Preview = {
     },
   },
 };
+
+export const decorators = [
+  withThemeByClassName({
+    themes: {
+      light: "",
+      dark: "dark",
+    },
+    defaultTheme: "light",
+  }),
+];
 
 export default preview;
