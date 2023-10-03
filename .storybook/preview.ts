@@ -1,8 +1,4 @@
-import type { Preview } from "@storybook/svelte";
-import { withThemeByClassName } from "@storybook/addon-styling";
-import "../src/app.css";
-
-import { themes } from '@storybook/theming';
+import type { Preview } from "@storybook/react";
 
 const preview: Preview = {
   parameters: {
@@ -13,20 +9,7 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
-    docs: {
-      theme: themes.dark,
-    },
   },
 };
-
-export const decorators = [
-  withThemeByClassName({
-      themes: {
-      light: "",
-      dark: "dark",
-    },
-    defaultTheme: "dark",
-  }),
-];
 
 export default preview;
