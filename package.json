@@ -1,6 +1,6 @@
 {
   "name": "woreda",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "type": "module",
   "files": ["dist"],
   "main": "./dist/woreda.umd.cjs",
