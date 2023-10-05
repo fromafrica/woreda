@@ -14,7 +14,7 @@ const preview: Preview = {
       },
     },
     docs: {
-      theme: themes.dark,
+      theme: themes.light
     },
   },
 };
@@ -22,10 +22,10 @@ const preview: Preview = {
 export const decorators = [
   withThemeByClassName({
       themes: {
-      light: "",
+      light: "light",
       dark: "dark",
     },
-    defaultTheme: "dark",
+    defaultTheme: "light",
   }),
 ];
 
