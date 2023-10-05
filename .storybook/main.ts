@@ -1,15 +1,5 @@
 import type { StorybookConfig } from "@storybook/svelte-vite";
 import { mergeConfig } from 'vite';
-import { devDependencies } from '../package.json';
-import { nodePolyfills } from 'vite-plugin-node-polyfills'
-
-function renderChunks(deps: Record<string, string>) {
-  let chunks = {};
-  Object.keys(deps).forEach((key) => {
-    chunks[key] = [key];
-  });
-  return chunks;
-}
 
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx|svelte)"],
@@ -31,14 +21,18 @@ const config: StorybookConfig = {
       build: {
         sourcemap: true,
         rollupOptions: {
+          preserveEntrySignatures: true,
+          output: {
+            format: 'esm', // set ES modules
+            preserveModules: true,
+            dir: 'dist',
+          },
           treeshake: {
-              preset: 'smallest',
+              preset: 'recommended',
           },
         },
       },
-      plugins: [
-        nodePolyfills(),
-      ],
+      plugins: [],
     });
   },
 };
