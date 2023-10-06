@@ -20,7 +20,7 @@ const config: StorybookConfig = {
     // Merge custom configuration into the default config
     return mergeConfig(config, {
       build: {
-        sourcemap: true,
+        sourcemap: false,
         rollupOptions: {
           experimentalLogSideEffects: true,
           output: {
@@ -31,19 +31,7 @@ const config: StorybookConfig = {
           manualChunks: (id) => {
             if (id.includes("node_modules")) {
 
-                if (id.includes("prettier")) {
-                    return "vendor_prettier";
-
-                } else if (id.includes("react-dom")) {
-                    return "vendor_react_dom";
-
-                } else if (id.includes("react-inspector")) {
-                    return "vendor_react_inspector";
-
-                } else if (id.includes("react")) {
-                    return "vendor_react";
-
-                } else if (id.includes("@storybook/addon-docs")) {
+                if (id.includes("@storybook/addon-docs")) {
                   return "vendor_storybook_docs";
 
                 } else if (id.includes("@storybook/addon-styling")) {
