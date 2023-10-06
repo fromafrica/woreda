@@ -1,7 +1,19 @@
 {
   "name": "woreda",
-  "version": "3.7.1",
+  "version": "3.7.2",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/woreda.umd.cjs",
+  "module": "./dist/woreda.js",
+  "exports": {
+    ".": {
+      "import": "./dist/woreda.js",
+      "require": "./dist/woreda.umd.cjs"
+    }
+  },
+  "types": "./dist/woreda.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
