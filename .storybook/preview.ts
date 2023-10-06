@@ -1,8 +1,6 @@
-import type { Preview } from "@storybook/svelte";
+import type { Preview } from "@storybook/react";
 import { withThemeByClassName } from "@storybook/addon-styling";
-import "../src/app.css";
-
-import { themes } from '@storybook/theming';
+import "../src/woreda.css";
 
 const preview: Preview = {
   parameters: {
@@ -13,20 +11,17 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
-    docs: {
-      theme: themes.light
-    },
   },
 };
 
-export const decorators = [
-  withThemeByClassName({
-      themes: {
-      light: "light",
-      dark: "dark",
-    },
-    defaultTheme: "light",
-  }),
-];
+// export const decorators = [
+//    withThemeByClassName({
+//      themes: {
+//        light: "",
+//        dark: "dark",
+//      },
+//      defaultTheme: "light",
+//    }),
+//  ];
 
 export default preview;

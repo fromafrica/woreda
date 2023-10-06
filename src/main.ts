@@ -1,4 +1,7 @@
-// Reexport your entry components here
-import * as Button from './stories/Button.svelte';
+export { Button } from './stories/Button.tsx';
+export type { ButtonProps } from './stories/Button.tsx';
 
-export default Button;
+export { Header } from './stories/Header.tsx';
+export type { HeaderProps } from './stories/Header.tsx';
+
+export { Page } from './stories/Page.tsx';
