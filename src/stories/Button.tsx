@@ -1,4 +1,3 @@
-import './button.css';
 
 export interface ButtonProps {
   /**
@@ -33,11 +32,11 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary ? 'bg-blue-500 hover:bg-blue-700 text-white' : 'bg-white hover:bg-blue-500 text-blue-700';
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={['border-2 font-bold py-2 px-4 rounded-full', `${size}`, mode].join(' ')}
       style={{ backgroundColor }}
       {...props}
     >
