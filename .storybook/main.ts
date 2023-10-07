@@ -16,5 +16,8 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  typescript: {
+    check: true, // type-check stories during Storybook build
+  },
 };
 export default config;

@@ -1,3 +1,5 @@
+import './woreda.css';
+
 export { Button } from './stories/Button.tsx';
 export type { ButtonProps } from './stories/Button.tsx';
 

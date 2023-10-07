@@ -1,6 +1,6 @@
 {
   "name": "woreda",
-  "version": "3.7.3",
+  "version": "3.7.4",
   "type": "module",
   "files": [
     "dist"
@@ -10,7 +10,8 @@
   "exports": {
     ".": {
       "import": "./dist/woreda.js",
-      "require": "./dist/woreda.umd.cjs"
+      "require": "./dist/woreda.umd.cjs",
+      "types": "./dist/woreda.d.ts"
     }
   },
   "types": "./dist/woreda.d.ts",
@@ -49,6 +50,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.14",
     "postcss": "^8.4.31",
+    "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^7.4.6",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.0.2",
