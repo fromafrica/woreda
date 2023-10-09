@@ -1,6 +1,6 @@
 {
   "name": "woreda",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "type": "module",
   "files": [
     "dist"
@@ -11,10 +11,10 @@
     ".": {
       "import": "./dist/woreda.js",
       "require": "./dist/woreda.umd.cjs",
-      "types": "./dist/woreda.d.ts"
+      "types": "./dist/main.d.ts"
     }
   },
-  "types": "./dist/woreda.d.ts",
+  "types": "./dist/main.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && npm run generate-types",
@@ -22,7 +22,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "generate-types": "tsc src/stories/*.tsx --declaration --emitDeclarationOnly --esModuleInterop --jsx \"react-jsx\" --outFile \"./dist/woreda.d.ts\""
+    "generate-types": "tsc src/main.ts --declaration --emitDeclarationOnly --esModuleInterop --jsx \"react-jsx\" --outDir \"./dist\""
   },
   "dependencies": {
     "react": "^18.2.0",
