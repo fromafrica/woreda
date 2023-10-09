@@ -1,5 +1,5 @@
+import React from 'react';
 import { Button } from './Button';
-import './header.css';
 
 type User = {
   name: string;
@@ -12,11 +12,12 @@ export interface HeaderProps {
   onCreateAccount: () => void;
 }
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
+export const Header: React.FC<HeaderProps> = (props) => {
+  return (
   <header>
-    <div className="storybook-header">
+    <div className="border-b-[1px_solid_#000] p-[20px] flex items-center justify-between">
       <div>
-        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <svg className='inline-block align-top' width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" fillRule="evenodd">
             <path
               d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
@@ -32,23 +33,24 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
             />
           </g>
         </svg>
-        <h1>Acme</h1>
+        <h1 className='font-bold text-[20px] leading-none ml-[10px] mr-[0] my-[6px] inline-block align-top'>Acme</h1>
       </div>
       <div>
-        {user ? (
+        {props.user ? (
           <>
-            <span className="welcome">
-              Welcome, <b>{user.name}</b>!
+            <span className="text-[#333] text-[14px] mr-[10px]">
+              Welcome, <b>{props.user.name}</b>!
             </span>
-            <Button size="small" onClick={onLogout} label="Log out" />
+            <Button size="small" onClick={props.onLogout} label="Log out" />
           </>
         ) : (
           <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+            <Button size="small" onClick={props.onLogin} label="Log in" />
+            <Button primary size="small" onClick={props.onCreateAccount} label="Sign up" />
           </>
         )}
       </div>
     </div>
   </header>
-);
+  )
+};

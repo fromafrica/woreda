@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
 import react from '@vitejs/plugin-react'
-import dts from 'vite-plugin-dts'
-import tailwindcss from 'tailwindcss'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -28,12 +27,12 @@ export default defineConfig({
 		sourcemap:true,
 		emptyOutDir:true
 	},
-	plugins: [react(), dts({ rollupTypes: true })],
-	css: {
-		postcss: {
-		plugins: [
-			tailwindcss('./tailwind.config.js'),
-		],
-		},
-	}
+	plugins: [react(), viteStaticCopy({
+		targets: [
+			{
+			src: 'tailwind.config.js',
+			dest: './'
+			}
+		]
+		})],
 })
