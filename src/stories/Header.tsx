@@ -15,7 +15,7 @@ export interface HeaderProps {
 export const Header: React.FC<HeaderProps> = (props) => {
   return (
   <header>
-    <div className="border-b-[1px_solid_#000] p-[20px] flex items-center justify-between">
+    <div className="border-b-[1px_solid_#000] p-5 w-auto flex items-center justify-between">
       <div>
         <svg className='inline-block align-top' width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
           <g fill="none" fillRule="evenodd">
