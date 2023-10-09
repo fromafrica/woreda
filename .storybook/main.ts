@@ -39,15 +39,6 @@ const config: StorybookConfig = {
                 if (id.includes("prettier")) {
                     return "vendor_prettier";
 
-                } else if (id.includes("react-dom")) {
-                    return "vendor_react_dom";
-
-                } else if (id.includes("react-inspector")) {
-                    return "vendor_react_inspector";
-
-                } else if (id.includes("react")) {
-                    return "vendor_react";
-
                 } else if (id.includes("@storybook/addon-docs")) {
                   return "vendor_storybook_docs";
 
